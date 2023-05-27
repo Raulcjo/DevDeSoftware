@@ -44,8 +44,9 @@ public class Estoque2 {
 	}
 	
 	public void retirarEstoque(int id, int quant) {
-		quant -= produto.get(id).getQtd();
-		produto.get(id).setQtd(quant);
+		int sub = produto.get(id).getQtd();
+		sub -= quant;
+		produto.get(id).setQtd(sub);
 	}
 	
 	public int verificarQuantidadeEstoque(int id) {
